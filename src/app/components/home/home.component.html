@@ -1,0 +1,14 @@
+<h1>Métodos de pago disponibles:</h1>
+<h2 *ngIf="meansOfPayment.length == 0" >Cargando información...</h2>
+<div class="card-columns mt-3">
+  <div *ngFor="let mean of meansOfPayment" class="card border-light">
+    <img class="card-img-top" [src]="mean.img" [alt]="mean.name">
+    <div class="card-body">
+      <h5 class="card-title">{{ mean.name }}</h5>
+
+      <button (click)="getMeanOfPayment(mean._id)" type="button" class="btn btn-block btn-outline-primary">
+        Ver pasos a seguir
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<h2>
+  Forma de pago: <small> {{formaDePago.name}} </small>
+</h2>
+
+<h2 *ngIf="esObjetoVacio(formaDePago)">Cargando información...</h2>
+
+<div *ngIf="formaDePago.infographics !=''">
+  <a [routerLink]="['/']" class="btn btn-secondary mb-3">Regresar</a>
+  <img [src]="formaDePago.infographics" alt="formaDePago.name" class="img-fluid mb-1">
+</div>
+
+<div *ngIf="formaDePago.infographics ==''">
+  <img [src]=" formaDePago.img" alt="formaDePago.name" class="img-fluid mb-1">
+  <ul>
+    <li *ngFor="let step of formaDePago.steps" class="steps py-1">
+      {{step}}
+    </li>
+  </ul>
+
+  <a [routerLink]="['/']" class="btn btn-secondary mb-3">Regresar</a>
+</div>
