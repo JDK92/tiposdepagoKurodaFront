@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this._meansOfPayment.obtenerFormasDePago().subscribe((data: any) => {
-      console.log(data);
+      // console.log(data);
       this.meansOfPayment = data.formasdepago;      
     }, (err) => {
       console.log(err);

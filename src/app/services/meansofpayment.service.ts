@@ -5,11 +5,11 @@ import { Injectable } from '@angular/core';
 export class MeansOfPayment {
     private API_URL = 'http://localhost:3000'
     constructor(private httpClient: HttpClient) {
-        console.log('Servicio funcionando!');
+        // console.log('Servicio funcionando!');
     }
     getQuery(query: String) {
         const url = `${this.API_URL}/${query}`;
-        console.log(url);
+        // console.log(url);
         return this.httpClient.get(url);
     }
 

@@ -24,7 +24,7 @@ export class FormadepagoComponent implements OnInit {
 
   ngOnInit() {
     this._meansOfPayment.formaDePago(this.idFormaDePago).subscribe((data: any) => {
-      console.log(data);
+      // console.log(data);
 
       this.formaDePago = data.formasdepago;
 
